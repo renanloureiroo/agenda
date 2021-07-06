@@ -1,20 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+
   <%- include('./includes/head')%>
 
-  <body>
-    <section class="container">
-      <h1><%= titulo %></h1>
+  <%- include('./includes/nav') %> 
+  <div class="col-lg-8 my-3">
+    <h1 class="text-center">Agenda</h1>
+    <p class="text-center lead">Seus contatos estão abaixo</p>
 
-      <form action="/" method="POST">
-        <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+    <div class="row">
+      <div class="col my-3">
+        <div class="alert alert-danger">Um erro qualquer</div>
+      </div>
+    </div>
 
-        <label>Cliente</label>
-        <input type="text" name="cliente" />
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-
-    <script src="./assets/js/bundle.js"></script>
-  </body>
-</html>
+    <div class="responsive-table">
+      <table class="table my-3">
+        <tr>
+          <td>Renan</td>
+          <td>Loureiro</td>
+          <td>548549847984</td>
+          <td>renanpl47@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Renan</td>
+          <td>Loureiro</td>
+          <td>548549847984</td>
+          <td>renanpl47@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Renan</td>
+          <td>Loureiro</td>
+          <td>548549847984</td>
+          <td>renanpl47@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Renan</td>
+          <td>Loureiro</td>
+          <td>548549847984</td>
+          <td>renanpl47@gmail.com</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+    <%- include('./includes/footer')%> 
