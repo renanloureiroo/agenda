@@ -35,6 +35,7 @@ const sessionOptions = session({
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.resolve(__dirname, "public")));
+app.use(express.json())
 // app.use(helmet());
 app.use(sessionOptions);
 app.use(flash());
