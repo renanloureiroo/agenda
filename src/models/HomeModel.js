@@ -1,10 +1,15 @@
-const mongoose = require("mongoose");
+
+const mongoose = require('mongoose');
 
 const HomeSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  description: String,
+  titulo: { type: String, required: true },
+  descricao: String
 });
 
-const HomeModel = mongoose.model("Home", HomeSchema);
+const HomeModel = mongoose.model('Home', HomeSchema);
 
-module.exports = HomeModel;
+class Home {
+
+}
+
+module.exports = Home;

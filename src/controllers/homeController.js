@@ -1,13 +1,6 @@
-// const HomeModel = require("../models/HomeModel");
+const Contato = require('../models/ContatoModel');
 
-// HomeModel.create({
-//   title: "Um título de testes",
-//   description: "Uma descrição de testes",
-// })
-//   .then((dados) => console.log(dados))
-//   .catch((e) => console.log(e));
-
-exports.paginaInicial = (req, res) => {
-  res.render("index");
+exports.index = async(req, res) => {
+  const contatos = await Contato.buscaContatos();
+  res.render('index', { contatos });
 };
-
